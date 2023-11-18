@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "graphql-explorer"
+version = "0.1.0"
+description = ""
+authors = ["Abhinand C <abhinandc.ac@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+python-decouple = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
