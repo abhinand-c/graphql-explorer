@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "graphql-explorer"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Abhinand C <abhinandc.ac@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.10"
+python = ">=3.7"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "*"
