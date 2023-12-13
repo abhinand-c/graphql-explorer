@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi.responses import HTMLResponse
-from .templates import APOLLO_SANDBOX_HTML, GRAPHIQL_HTML, GRAPHQL_VOYAGER_HTML
+from .templates import APOLLO_SANDBOX_HTML, GRAPHIQL_HTML, GRAPHQL_VOYAGER_HTML, PATHFINDER_IDE_HTML
 
 try:
     import logging
@@ -10,7 +10,8 @@ try:
         "\n\t Apollo Sandbox Explorer at:\t /  &  /explorer/apollo"
         "\n\t GraphiQL Playground at:\t /explorer/graphiql"
         "\n\t GraphQL Voyager at:\t\t /explorer/voyager"
-        ""
+        "\n\t GraphQL Voyager at:\t\t /explorer/pathfinder"
+        "\n"
     )
 except Exception:
     pass
@@ -35,4 +36,10 @@ async def graphiql() -> HTMLResponse:
 async def voyager() -> HTMLResponse:
     return HTMLResponse(
         content=GRAPHQL_VOYAGER_HTML
+    )
+
+@router.get("/explorer/pathfinder", name="Pathfinder IDE")
+async def voyager() -> HTMLResponse:
+    return HTMLResponse(
+        content=PATHFINDER_IDE_HTML
     )
